@@ -1,0 +1,12 @@
+{
+    name: "counter_ip",
+    clock_primary: "clk_i",
+    reset_primary: "rst_ni",
+    bus_device: "reg",
+    bus_host: "",
+
+    regwidth: "32",
+    registers: [
+        
+    ]
+}
