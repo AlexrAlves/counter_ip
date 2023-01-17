@@ -7,6 +7,39 @@
 
     regwidth: "32",
     registers: [
-        
-    ]
+        { name: "DT_IN",
+          desc: "Data to be loaded to the counter.",
+          swaccess: "wo",
+          hwaccess: "hro",
+          hwext: "true",
+          fields: [
+            { bits: "15:0"
+            }
+          ],
+        },
+        { name: "CT_OUT",
+          desc: "Counter current value to be retrieved by software.",
+          swaccess: "ro",
+          hwaccess: "hwo",
+          hwext: "true",
+          fields: [
+            { bits: "15:0"
+            }
+          ],
+        },
+        { name: "CTRL",
+          desc: "Controls reset and load signal of the counter.",
+          swaccess: "wo",
+          hwaccess: "hro",
+          hwext: "true",
+          fields: [
+            { bits: "0", name: "RESET",
+              desc: "Reset the counter on rising edge."
+            }
+            { bits: "1", name: "LOAD",
+              desc: "Load the data to the counter on rising edge."
+            }
+          ]
+        },
+    ],
 }
