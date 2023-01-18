@@ -7,7 +7,7 @@
 
     regwidth: "32",
     registers: [
-        { name: "DT_IN",
+        { name: "DTIN",
           desc: "Data to be loaded to the counter.",
           swaccess: "wo",
           hwaccess: "hro",
@@ -17,7 +17,7 @@
             }
           ],
         },
-        { name: "CT_OUT",
+        { name: "CTOUT",
           desc: "Counter current value to be retrieved by software.",
           swaccess: "ro",
           hwaccess: "hwo",
@@ -28,7 +28,7 @@
           ],
         },
         { name: "CTRL",
-          desc: "Controls reset and load signal of the counter.",
+          desc: "Controls reset, load, and enable signal of the counter.",
           swaccess: "wo",
           hwaccess: "hro",
           hwext: "true",
@@ -38,6 +38,9 @@
             }
             { bits: "1", name: "LOAD",
               desc: "Load the data to the counter on rising edge."
+            }
+            { bits: "2", name: "EN"
+              desc: "Enable the counter on rising edge."
             }
           ]
         },
