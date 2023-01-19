@@ -76,18 +76,28 @@ module counter_ip_reg_top #(
   logic ctrl_en_we;
 
   // Register instances
-  // R[dtin]: V(True)
+  // R[dtin]: V(False)
 
-  prim_subreg_ext #(
-    .DW    (16)
+  prim_subreg #(
+    .DW      (16),
+    .SWACCESS("WO"),
+    .RESVAL  (16'h0)
   ) u_dtin (
-    .re     (1'b0),
+    .clk_i   (clk_i    ),
+    .rst_ni  (rst_ni  ),
+
+    // from register interface
     .we     (dtin_we),
     .wd     (dtin_wd),
-    .d      ('0),
-    .qre    (),
-    .qe     (reg2hw.dtin.qe),
+
+    // from internal hardware
+    .de     (1'b0),
+    .d      ('0  ),
+
+    // to internal hardware
+    .qe     (),
     .q      (reg2hw.dtin.q ),
+
     .qs     ()
   );
 

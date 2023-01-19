@@ -1,0 +1,12 @@
+counter_ip:
+  incdirs:
+    - ../register_interface/include
+    - ../register_interface/vendor/lowrisc_opentitan/include
+  files:
+    - gen_sv/counter_ip_reg_pkg.sv
+    - gen_sv/counter_ip_reg_top.sv
+    - counter_ip_pkg.sv
+    - counter_ip.sv
+    - counter_ip_top.sv
+  vlog_opts:
+    - -L register_interface_lib

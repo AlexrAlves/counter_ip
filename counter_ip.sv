@@ -17,12 +17,12 @@ module counter
     if(reset == 1 || count == '1) begin    //Set Counter to Zero
       count <= '0;
     end
-    else if(enable) begin      //count up
-      count <= count + 1;
-  	end
     else if(load) begin    //load the counter with data value
       count <= data_in;
     end
+    else if(enable) begin      //count up
+      count <= count + 1;
+  	end
     else begin
       count <= count;
     end
