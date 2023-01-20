@@ -69,7 +69,7 @@ module counter_ip_top
 
     counter_ip #( 
                   .OUTPUT_WIDTH(16),
-                  .IDATA_WIDTH(16),
+                  .IDATA_WIDTH(16)
     ) i_counter_ip (
                      .clk(clk_i),
                      .reset(reg_file_to_ip.ctrl.reset.q & reg_file_to_ip.ctrl.reset.qe),
