@@ -1,5 +1,10 @@
-#include <stdio.h>
-#include "pulp.h"
+#include <rt/rt_api.h>
+#include "counter_ip_auto.h"
+#include "counter_ip_driver.h"
+
+int __rt_fpga_fc_frequency = 20000000; // e.g. 20000000 for 20MHz;
+int __rt_fpga_periph_frequency = 10000000; // e.g. 10000000 for 10MHz;
+unsigned int __rt_iodev_uart_baudrate = 9600;
 
 int main()
 {
