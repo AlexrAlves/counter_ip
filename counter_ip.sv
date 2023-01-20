@@ -1,4 +1,4 @@
-module counter
+module counter_ip
   #(
    parameter OUTPUT_WIDTH = 16,
    parameter IDATA_WIDTH = 16
@@ -27,4 +27,4 @@ module counter
       count <= count;
     end
   end
-endmodule :counter
+endmodule : counter_ip

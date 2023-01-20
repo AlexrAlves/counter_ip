@@ -67,13 +67,16 @@ module counter_ip_top
                  .hw2reg(ip_to_reg_file)
     );
 
-    counter_ip i_counter_ip (
-                             .clk(clk_i),
-                             .reset(reg_file_to_ip.ctrl.reset.q & reg_file_to_ip.ctrl.reset.qe),
-                             .load(reg_file_to_ip.ctrl.load.q & reg_file_to_ip.ctrl.load.qe),
-                             .enable(reg_file_to_ip.ctrl.en.q & reg_file_to_ip.ctrl.en.qe),
-                             .data_in(reg_file_to_ip.dtin),
-                             .count(ip_to_reg_file.cout)
+    counter_ip #( 
+                  .OUTPUT_WIDTH(16),
+                  .IDATA_WIDTH(16),
+    ) i_counter_ip (
+                     .clk(clk_i),
+                     .reset(reg_file_to_ip.ctrl.reset.q & reg_file_to_ip.ctrl.reset.qe),
+                     .load(reg_file_to_ip.ctrl.load.q & reg_file_to_ip.ctrl.load.qe),
+                     .enable(reg_file_to_ip.ctrl.en.q & reg_file_to_ip.ctrl.en.qe),
+                     .data_in(reg_file_to_ip.dtin),
+                     .count(ip_to_reg_file.cout)
     )
 
 endmodule : counter_ip_top
