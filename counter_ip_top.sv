@@ -76,7 +76,7 @@ module counter_ip_top
                      .load(reg_file_to_ip.ctrl.load.q & reg_file_to_ip.ctrl.load.qe),
                      .enable(reg_file_to_ip.ctrl.en.q & reg_file_to_ip.ctrl.en.qe),
                      .data_in(reg_file_to_ip.dtin),
-                     .count(ip_to_reg_file.cout)
+                     .count(ip_to_reg_file.ctout)
     );
 
 endmodule : counter_ip_top
