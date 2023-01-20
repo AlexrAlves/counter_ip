@@ -3,7 +3,7 @@ module counter_ip
    parameter OUTPUT_WIDTH = 16,
    parameter IDATA_WIDTH = 16
   )(
-    input logic clk,
+    input logic clk_i,
     input logic reset,
     input logic load,
     input logic enable, 
@@ -12,7 +12,7 @@ module counter_ip
   );
   
   //always block will be executed at each and every positive edge of the clock
-  always_ff@(posedge clk) 
+  always_ff@(posedge clk_i) 
   begin
     if(reset == 1 || count == '1) begin    //Set Counter to Zero
       count <= '0;
