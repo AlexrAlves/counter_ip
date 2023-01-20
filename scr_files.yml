@@ -5,7 +5,6 @@ counter_ip:
   files:
     - gen_sv/counter_ip_reg_pkg.sv
     - gen_sv/counter_ip_reg_top.sv
-    - counter_ip_pkg.sv
     - counter_ip.sv
     - counter_ip_top.sv
   vlog_opts:
