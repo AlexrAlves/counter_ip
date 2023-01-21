@@ -7,4 +7,4 @@ void load_counter_on(void);
 void load_counter_off(void);
 void enable_counter(void);
 void disable_counter(void);
-void get_count(uint32_t * count);
+uint32_t get_count(void);

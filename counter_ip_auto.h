@@ -9,6 +9,8 @@ extern "C" {
 // Register width
 #define COUNTER_IP_PARAM_REG_WIDTH 32
 
+#define COUNTER_IP0_BASE_ADDR 0x1a400000
+
 // Common Interrupt Offsets
 
 // Data to be loaded to the counter.
