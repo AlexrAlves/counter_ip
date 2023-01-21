@@ -80,5 +80,5 @@ void get_count(uint32_t * count)
 {
     uint32_t volatile * count_reg = (uint32_t*)COUNTER_IP_CTOUT(0);
 
-    *count = count_reg;
+    *count = *count_reg;
 }

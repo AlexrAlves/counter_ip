@@ -30,7 +30,7 @@
           desc: "Controls reset, load, and enable signal of the counter.",
           swaccess: "wo",
           hwaccess: "hro",
-          hwext: "true",
+          #hwext: "true",
           fields: [
             { bits: "0", name: "RESET",
               desc: "Reset the counter on rising edge."

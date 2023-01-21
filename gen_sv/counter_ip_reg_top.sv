@@ -118,49 +118,79 @@ module counter_ip_reg_top #(
   );
 
 
-  // R[ctrl]: V(True)
+  // R[ctrl]: V(False)
 
   //   F[reset]: 0:0
-  prim_subreg_ext #(
-    .DW    (1)
+  prim_subreg #(
+    .DW      (1),
+    .SWACCESS("WO"),
+    .RESVAL  (1'h0)
   ) u_ctrl_reset (
-    .re     (1'b0),
+    .clk_i   (clk_i    ),
+    .rst_ni  (rst_ni  ),
+
+    // from register interface
     .we     (ctrl_reset_we),
     .wd     (ctrl_reset_wd),
-    .d      ('0),
-    .qre    (),
-    .qe     (reg2hw.ctrl.reset.qe),
+
+    // from internal hardware
+    .de     (1'b0),
+    .d      ('0  ),
+
+    // to internal hardware
+    .qe     (),
     .q      (reg2hw.ctrl.reset.q ),
+
     .qs     ()
   );
 
 
   //   F[load]: 1:1
-  prim_subreg_ext #(
-    .DW    (1)
+  prim_subreg #(
+    .DW      (1),
+    .SWACCESS("WO"),
+    .RESVAL  (1'h0)
   ) u_ctrl_load (
-    .re     (1'b0),
+    .clk_i   (clk_i    ),
+    .rst_ni  (rst_ni  ),
+
+    // from register interface
     .we     (ctrl_load_we),
     .wd     (ctrl_load_wd),
-    .d      ('0),
-    .qre    (),
-    .qe     (reg2hw.ctrl.load.qe),
+
+    // from internal hardware
+    .de     (1'b0),
+    .d      ('0  ),
+
+    // to internal hardware
+    .qe     (),
     .q      (reg2hw.ctrl.load.q ),
+
     .qs     ()
   );
 
 
   //   F[en]: 2:2
-  prim_subreg_ext #(
-    .DW    (1)
+  prim_subreg #(
+    .DW      (1),
+    .SWACCESS("WO"),
+    .RESVAL  (1'h0)
   ) u_ctrl_en (
-    .re     (1'b0),
+    .clk_i   (clk_i    ),
+    .rst_ni  (rst_ni  ),
+
+    // from register interface
     .we     (ctrl_en_we),
     .wd     (ctrl_en_wd),
-    .d      ('0),
-    .qre    (),
-    .qe     (reg2hw.ctrl.en.qe),
+
+    // from internal hardware
+    .de     (1'b0),
+    .d      ('0  ),
+
+    // to internal hardware
+    .qe     (),
     .q      (reg2hw.ctrl.en.q ),
+
     .qs     ()
   );
 

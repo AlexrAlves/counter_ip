@@ -16,15 +16,12 @@ package counter_ip_reg_pkg;
   typedef struct packed {
     struct packed {
       logic        q;
-      logic        qe;
     } reset;
     struct packed {
       logic        q;
-      logic        qe;
     } load;
     struct packed {
       logic        q;
-      logic        qe;
     } en;
   } counter_ip_reg2hw_ctrl_reg_t;
 
@@ -38,8 +35,8 @@ package counter_ip_reg_pkg;
   // Register to internal design logic //
   ///////////////////////////////////////
   typedef struct packed {
-    counter_ip_reg2hw_dtin_reg_t dtin; // [22:7]
-    counter_ip_reg2hw_ctrl_reg_t ctrl; // [6:1]
+    counter_ip_reg2hw_dtin_reg_t dtin; // [19:4]
+    counter_ip_reg2hw_ctrl_reg_t ctrl; // [3:1]
   } counter_ip_reg2hw_t;
 
   ///////////////////////////////////////
