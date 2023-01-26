@@ -85,7 +85,7 @@ void disable_counter(void)
 
     asm volatile ("": : : "memory");        //compiler barrier
     *ctrl_en_reg = ctrl_old_value & ~(1<<COUNTER_IP_CTRL_EN);
-    asm volatile ("": : : "memory");        //compiler barr
+    asm volatile ("": : : "memory");        //compiler barrier
 
     ctrl_reg_sw = ctrl_old_value & ~(1<<COUNTER_IP_CTRL_EN);
 }
