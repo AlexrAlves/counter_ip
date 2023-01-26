@@ -1,0 +1,76 @@
+#####################################################
+COUNTER IP TEST!
+#####################################################
+Getting counter initial value!
+--------------------------------------------------   
+
+Initial Value: 0
+--------------------------------------------------   
+
+Enabling counter and getting five readings!
+--------------------------------------------------   
+
+First reading: count = 9
+Second reading: count = 20
+Third reading: count = 31
+Fourth reading: count = 42
+Fifth reading: count = 53
+--------------------------------------------------   
+
+Reseting counter (Reset bit high)!
+--------------------------------------------------   
+
+Count value after reseting: count = 0
+Count value reset bit still high: count = 0
+Count value reset bit still high: count = 0
+--------------------------------------------------   
+
+Setting reset bit to low!
+--------------------------------------------------   
+
+Count value reset bit low: count = 9
+--------------------------------------------------   
+
+For loop counting!
+--------------------------------------------------   
+
+For loop reading(0): count = 32214
+For loop reading(1): count = 32228
+For loop reading(2): count = 32242
+For loop reading(3): count = 32256
+For loop reading(4): count = 32270
+For loop reading(5): count = 32284
+For loop reading(6): count = 32298
+For loop reading(7): count = 32312
+For loop reading(8): count = 32326
+For loop reading(9): count = 32340
+--------------------------------------------------   
+
+Disabling counter (enable bit low)!
+--------------------------------------------------   
+
+Count value after disabling: count = 13117
+Count value after disabling: count = 13117
+Count value after disabling: count = 13117
+--------------------------------------------------   
+
+Loading data (count value 16) to the counter!
+--------------------------------------------------   
+
+Count value after loading: count = 16
+Count value after loading: count = 16
+Count value after loading: count = 16
+--------------------------------------------------   
+
+Enabling counter (enable bit high)!
+--------------------------------------------------   
+
+Count value after enabling: count = 25
+-------------------------------------------------- 
+
+Reseting and Finishing!
+--------------------------------------------------   
+
+Final value: count = 0
+#####################################################
+
